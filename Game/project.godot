@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 AudioMusic="*res://scenes/audio_music.tscn"
+Global="*res://scenes/global.tscn"
 
 [input]
 
