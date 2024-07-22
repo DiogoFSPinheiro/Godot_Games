@@ -11,3 +11,4 @@ res://scenes/slime.tscn
 res://scripts/check_point.gd
 res://scenes/global.tscn
 res://scripts/global.gd
+res://scenes/block.tscn

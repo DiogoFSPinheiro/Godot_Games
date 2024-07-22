@@ -8,7 +8,7 @@
 
 extends Node
 
-var spawn_point = Vector2(1344, -64)
+var spawn_point = Vector2(1359, -492)
 var collected_checkpoints = {}
 var collected_items = {}
 var coin = 0
