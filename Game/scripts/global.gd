@@ -8,14 +8,15 @@
 
 extends Node
 
-var spawn_point = Vector2(1359, -492)
+var spawn_point = Vector2(1340, -1698) # init ( (2158, 50)
 var collected_checkpoints = {}
 var collected_items = {}
 var coin = 0
 
 func update_spawn(new_point, checkpoint_id):
 	spawn_point = new_point
-	collected_checkpoints[checkpoint_id] = true
+	if checkpoint_id:
+		collected_checkpoints[checkpoint_id] = true
 
 func is_checkpoint_collected(checkpoint_id):
 	return collected_checkpoints.has(checkpoint_id) and collected_checkpoints[checkpoint_id]

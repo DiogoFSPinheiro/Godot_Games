@@ -4,12 +4,12 @@
 [ext_resource type="Script" path="res://scripts/block.gd" id="1_aj3pp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pm04v"]
-size = Vector2(16, 15)
+size = Vector2(16, 14)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_12pwy"]
 size = Vector2(18, 14)
 
-[node name="Block" type="RigidBody2D"]
+[node name="Block" type="RigidBody2D" groups=["Blocks"]]
 gravity_scale = 0.0
 script = ExtResource("1_aj3pp")
 
@@ -19,15 +19,11 @@ region_enabled = true
 region_rect = Rect2(32, 0, 16, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_pm04v")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="block area" type="Area2D" parent="." groups=["block_area"]]
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block area"]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_12pwy")
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

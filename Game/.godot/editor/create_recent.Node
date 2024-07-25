@@ -1,4 +1,11 @@
-Node
-Area2D
 CollisionShape2D
+Area2D
+AnimationPlayer
+AnimationTree
+Node
+Sprite2D
+Node2D
+AnimatableBody2D
+CharacterBody2D
+RigidBody2D
 AnimatedSprite2D

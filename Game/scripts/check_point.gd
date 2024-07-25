@@ -1,13 +1,3 @@
-#extends Area2D
-
-#@onready var game_manager = %GameManager
-#@onready var animated_sprite = $AnimatedSprite2D
-
-#func _on_body_entered(body: Node) -> void:
-#	if body && game_manager.score > 0:
-#		Global.update_spawn(self.global_position)
-#		animated_sprite.play("checked")
-
 extends Area2D
 
 @onready var game_manager = %GameManager

@@ -6,3 +6,5 @@ func add_point():
 	score += 1
 	print(score)
 
+
+
