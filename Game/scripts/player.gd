@@ -28,11 +28,11 @@ func _physics_process(delta):
 	
 	if is_on_floor():
 		if direction == 0:
-			animated_sprite.play("idle")
+			animated_sprite.play("idle_v2")
 		else:
-			animated_sprite.play("run")
+			animated_sprite.play("run_v2")
 	else:
-		animated_sprite.play("jump")
+		animated_sprite.play("jump_v2")
 	
 	if direction != 0 && (near_block == false && !Input.is_action_just_pressed("grab")):
 		update_direction(direction)
