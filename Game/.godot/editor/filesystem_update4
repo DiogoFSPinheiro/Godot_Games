@@ -1,6 +1,5 @@
-res://scenes/player.tscn
-res://scripts/player.gd
 res://scenes/game.tscn
+res://scenes/player.tscn
 res://scenes/check_point.tscn
 res://scenes/global.tscn
 res://scenes/block.tscn
@@ -8,3 +7,9 @@ res://scenes/normal_block.tscn
 res://scenes/long_block.tscn
 res://scenes/platform.tscn
 res://scenes/killzone.tscn
+res://scripts/global.gd
+res://scripts/coin.gd
+res://scenes/coin.tscn
+res://scenes/slime.tscn
+res://scripts/player.gd
+res://scripts/check_point.gd

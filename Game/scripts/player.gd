@@ -36,7 +36,17 @@ func _physics_process(delta):
 	
 	if direction != 0 && (near_block == false && !Input.is_action_just_pressed("grab")):
 		update_direction(direction)
-	
+		
+	if direction == 0 && Input.is_action_just_pressed("flip"):
+		self.scale.x = -1
+		if facing_right == true:
+			facing_right = false
+			facing_left = true
+		else:
+			facing_right = true
+			facing_left = false
+			
+
 	if direction:
 		velocity.x = direction * SPEED
 	else:

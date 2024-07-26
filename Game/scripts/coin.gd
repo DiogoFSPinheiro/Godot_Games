@@ -12,7 +12,7 @@ func _ready():
 		animated_sprite.play("default")
 
 func _on_body_entered(_body):
-	game_manager.add_point()
+	Global.coin += 1
 	Global.collect_item(item_id)
 	animation_player.play("pickUp")
 	

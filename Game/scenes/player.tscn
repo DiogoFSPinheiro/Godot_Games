@@ -331,8 +331,9 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_315as"]
-radius = 6.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_niqdo"]
+radius = 5.0
+height = 12.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fgo6c"]
 size = Vector2(3, 5)
@@ -345,17 +346,17 @@ script = ExtResource("1_7qcun")
 z_index = 5
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_xv02q")
-animation = &"run"
+animation = &"idle_v2"
 autoplay = "idle_v2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -6)
-shape = SubResource("CircleShape2D_315as")
+shape = SubResource("CapsuleShape2D_niqdo")
 
 [node name="grab_area" type="Area2D" parent="." groups=["grab_area"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="grab_area"]
-position = Vector2(7.5, -4.5)
+position = Vector2(7, -6)
 shape = SubResource("RectangleShape2D_fgo6c")
 
 [connection signal="area_entered" from="grab_area" to="." method="_on_area_2d_area_entered"]

@@ -1,14 +1,6 @@
-#extends Node
-
-#var spawn_point = Vector2(1344,-64)
-
-	
-#func update_spawn(new_point):
-#	spawn_point = new_point
-
 extends Node
 
-var spawn_point = Vector2(1399, -2280) # init ( (2158, 50)
+var spawn_point = Vector2(1332, -2223) # init (1327, 391) (1399, -2280)
 var collected_checkpoints = {}
 var collected_items = {}
 var coin = 0
