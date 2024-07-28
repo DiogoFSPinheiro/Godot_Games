@@ -4,7 +4,7 @@ var SPEED = 100
 const JUMP_VELOCITY = -300.0
 @onready var game_manager = %GameManager
 @onready var animated_sprite = $AnimatedSprite2D
-var player_start = Vector2(-41,-208)
+#var player_start = Vector2(-41,-208)
 var player_position = null
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var near_block = false
@@ -14,8 +14,15 @@ var target = null
 var blocks_in_range = []
 var block_offset = Vector2()
 @onready var grab_area = $grab_area
+@onready var timer = $Timer
+
+@onready var stone_anim = $stone_anim
+
 
 func _physics_process(delta):
+	
+	if Global.kill == true:
+		stone_anim.play("default")
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -63,7 +70,7 @@ func _physics_process(delta):
 
 func _ready() -> void:
 	self.position = Global.spawn_point
-
+	
 func update_direction(new_direction_x):
 	if new_direction_x > 0 and not facing_right:
 		facing_right = true
@@ -82,6 +89,10 @@ func _on_grab_area_body_entered(body):
 		target = blocks_in_range[0]
 		SPEED = 51
 		near_block = true
+	if body.name == "vilan" and Global.kill == true:
+		Engine.time_scale = 0.5
+		Global.colide = true
+		timer.start()
 
 func _on_grab_area_body_exited(body):
 	if body.is_in_group("Blocks"):
@@ -99,6 +110,8 @@ func move_block(delta, direction):
 		var move_vector = Vector2(direction * SPEED * delta, 0)
 		target.move_and_collide(move_vector)
 
-
 	
 	
+func _on_timer_timeout():
+	Engine.time_scale = 1
+	self.position = Vector2(3384, -2046)

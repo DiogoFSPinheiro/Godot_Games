@@ -15,5 +15,6 @@ func _on_body_entered(_body):
 	Global.coin += 1
 	Global.collect_item(item_id)
 	animation_player.play("pickUp")
+
 	
 	

@@ -1,6 +1,5 @@
 extends Area2D
 
-@onready var game_manager = %GameManager
 @onready var animated_sprite = $AnimatedSprite2D
 @export var checkpoint_id : String
 var on = false
@@ -8,8 +7,10 @@ var on = false
 func _ready():
 	if Global.is_checkpoint_collected(checkpoint_id):
 		animated_sprite.play("checked")
+		on = true
 	else:
 		animated_sprite.play("un_checked")
+		on = false
 
 func _on_body_entered(body: Node) -> void:
 	if body and Global.coin > 0:
@@ -18,3 +19,4 @@ func _on_body_entered(body: Node) -> void:
 			Global.coin -= 1
 			on = true
 		animated_sprite.play("checked")
+

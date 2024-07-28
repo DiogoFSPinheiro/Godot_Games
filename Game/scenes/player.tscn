@@ -1,24 +1,8 @@
-[gd_scene load_steps=49 format=3 uid="uid://1xjwovya6ixr"]
+[gd_scene load_steps=50 format=3 uid="uid://1xjwovya6ixr"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_7qcun"]
 [ext_resource type="Texture2D" uid="uid://ch4wxekonpjrt" path="res://assets/sprites/knight.png" id="1_d87gs"]
 [ext_resource type="Texture2D" uid="uid://0jvehjbm1oc5" path="res://assets/sprites/knight_v2.png" id="3_n7h4b"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cmvtc"]
-atlas = ExtResource("1_d87gs")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rv0dl"]
-atlas = ExtResource("1_d87gs")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jflk1"]
-atlas = ExtResource("1_d87gs")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7k8m4"]
-atlas = ExtResource("1_d87gs")
-region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sag81"]
 atlas = ExtResource("3_n7h4b")
@@ -176,23 +160,6 @@ region = Rect2(224, 96, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cmvtc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rv0dl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jflk1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7k8m4")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_sag81")
 }, {
 "duration": 1.0,
@@ -338,6 +305,42 @@ height = 12.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fgo6c"]
 size = Vector2(3, 5)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_i7fr7"]
+atlas = ExtResource("3_n7h4b")
+region = Rect2(0, 38, 32, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvudr"]
+atlas = ExtResource("3_n7h4b")
+region = Rect2(32, 38, 32, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fuktc"]
+atlas = ExtResource("3_n7h4b")
+region = Rect2(64, 38, 32, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lo74n"]
+atlas = ExtResource("3_n7h4b")
+region = Rect2(96, 38, 32, 19)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mhgg7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i7fr7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fvudr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fuktc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lo74n")
+}],
+"loop": true,
+"name": &"stone",
+"speed": 5.0
+}]
+
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 script = ExtResource("1_7qcun")
@@ -359,7 +362,18 @@ shape = SubResource("CapsuleShape2D_niqdo")
 position = Vector2(7, -6)
 shape = SubResource("RectangleShape2D_fgo6c")
 
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="stone_anim" type="AnimatedSprite2D" parent="."]
+position = Vector2(9, -6)
+scale = Vector2(0.6875, 0.618421)
+sprite_frames = SubResource("SpriteFrames_mhgg7")
+animation = &"stone"
+frame_progress = 0.0518746
+
 [connection signal="area_entered" from="grab_area" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="grab_area" to="." method="_on_area_2d_area_exited"]
 [connection signal="body_entered" from="grab_area" to="." method="_on_grab_area_body_entered"]
 [connection signal="body_exited" from="grab_area" to="." method="_on_grab_area_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

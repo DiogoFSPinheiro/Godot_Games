@@ -16,7 +16,7 @@ script = ExtResource("1_aj3pp")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_0jc32")
 region_enabled = true
-region_rect = Rect2(32, 0, 32.0522, 8.56663)
+region_rect = Rect2(64.0903, -0.162771, 31.7557, 9.30007)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_pm04v")
@@ -25,5 +25,6 @@ shape = SubResource("RectangleShape2D_pm04v")
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="block area"]
+visible = false
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_12pwy")

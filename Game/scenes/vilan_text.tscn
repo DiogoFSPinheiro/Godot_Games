@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://deu7tdfsrg1qb"]
+
+[ext_resource type="Texture2D" uid="uid://cax8gcf8bpoal" path="res://assets/sprites/talk_baloon.png" id="1_5t6v7"]
+[ext_resource type="Script" path="res://scripts/vilan_text.gd" id="1_8apik"]
+
+[node name="vilan text" type="Control"]
+layout_mode = 3
+anchor_left = 0.203
+anchor_right = 1.0
+anchor_bottom = 0.792
+offset_left = -227.856
+offset_top = 2.0
+offset_right = -1013.0
+offset_bottom = -433.216
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8apik")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(159.625, 76.25)
+scale = Vector2(3.01563, 1.32292)
+texture = ExtResource("1_5t6v7")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 53.0
+offset_right = 224.0
+offset_bottom = 77.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "ola
+"
