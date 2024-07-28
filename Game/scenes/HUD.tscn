@@ -106,10 +106,9 @@ offset_right = 173.0
 offset_bottom = 88.0
 theme_override_fonts/font = ExtResource("2_okfii")
 theme_override_font_sizes/font_size = 23
-text = "Coins: "
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(37, 31)
-scale = Vector2(3.65625, 3)
+position = Vector2(33.875, 31)
+scale = Vector2(3.26563, 3)
 sprite_frames = SubResource("SpriteFrames_cn7ei")
 frame_progress = 0.359012

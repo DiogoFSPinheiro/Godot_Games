@@ -13,26 +13,29 @@ var facing_left = false
 var target = null
 var blocks_in_range = []
 var block_offset = Vector2()
+
 @onready var grab_area = $grab_area
 @onready var timer = $Timer
-
 @onready var stone_anim = $stone_anim
 
 
 func _physics_process(delta):
-	
+
 	if Global.kill == true:
-		stone_anim.play("default")
-	# Add the gravity.
+		stone_anim.show() # show sprite
+		stone_anim.play("stone")
+	else:
+		stone_anim.hide() # show sprite
+	
 	if not is_on_floor():
-		velocity.y += gravity * delta
+		velocity.y += gravity * delta # Add the gravity.
 	
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and (is_on_floor() or near_block == true):
+	if Input.is_action_just_pressed("jump") and (is_on_floor() or near_block == true or is_on_wall()):
 		velocity.y = JUMP_VELOCITY
-		
+	# get direction
 	var direction = Input.get_axis("move_left", "move_right")
-	
+	# chosing animation 
 	if is_on_floor():
 		if direction == 0:
 			animated_sprite.play("idle_v2")
@@ -40,10 +43,10 @@ func _physics_process(delta):
 			animated_sprite.play("run_v2")
 	else:
 		animated_sprite.play("jump_v2")
-	
+	# flip the sprite and hit boxes
 	if direction != 0 && (near_block == false && !Input.is_action_just_pressed("grab")):
 		update_direction(direction)
-		
+	# manual flip
 	if direction == 0 && Input.is_action_just_pressed("flip"):
 		self.scale.x = -1
 		if facing_right == true:
@@ -53,7 +56,7 @@ func _physics_process(delta):
 			facing_right = true
 			facing_left = false
 			
-
+	# move speed
 	if direction:
 		velocity.x = direction * SPEED
 	else:
@@ -61,11 +64,25 @@ func _physics_process(delta):
 
 	move_and_slide()  
 	
-	if near_block and Input.is_action_pressed("grab"):
+	if near_block:
+		stone_anim.show() # show sprite
+		stone_anim.play("hands")
+	else:
+		stone_anim.hide()
+	
+	if near_block and Input.is_action_pressed("grab") and direction != 0:
+		if not $sound.playing:
+			$sound.play()
 		move_block(delta, direction)
+	else:
+		if $sound.playing:
+			$sound.stop()
+
+	
 	
 	if Input.is_action_just_pressed("reset"):
-		get_tree().reload_current_scene()
+		Global.reset()
+
 		
 
 func _ready() -> void:
@@ -80,7 +97,6 @@ func update_direction(new_direction_x):
 		facing_right = false
 		facing_left = true
 		self.scale.x = -1
-
 
 func _on_grab_area_body_entered(body):
 	if body.is_in_group("Blocks"):
@@ -104,14 +120,16 @@ func _on_grab_area_body_exited(body):
 			near_block = false
 			SPEED = 100
 
-# tenho de mover no mesmo processo para eles nao descincronizarem	
-func move_block(delta, direction): 
+	
+func move_block(delta, direction): # tenho de mover no mesmo processo para eles nao descincronizarem
 	if target:
 		var move_vector = Vector2(direction * SPEED * delta, 0)
 		target.move_and_collide(move_vector)
+		$sound.pitch_scale = randf_range(0.4,0.65)
 
-	
-	
 func _on_timer_timeout():
 	Engine.time_scale = 1
 	self.position = Vector2(3384, -2046)
+	
+
+

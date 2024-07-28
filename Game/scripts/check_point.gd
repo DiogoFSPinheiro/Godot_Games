@@ -17,6 +17,8 @@ func _on_body_entered(body: Node) -> void:
 		Global.update_spawn(global_position, checkpoint_id)
 		if on == false:
 			Global.coin -= 1
+			$sound.play()
 			on = true
 		animated_sprite.play("checked")
+		
 

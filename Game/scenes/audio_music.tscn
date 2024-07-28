@@ -1,9 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://evowrsfjvcer"]
 
-[ext_resource type="AudioStream" uid="uid://dwbm8wogdcho6" path="res://assets/music/time_for_adventure.mp3" id="1_dyla5"]
+[ext_resource type="AudioStream" uid="uid://lao0radgqv7e" path="res://assets/music/Cyclopean Structure.mp3" id="1_f7gaf"]
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
-stream = ExtResource("1_dyla5")
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer"]
+stream = ExtResource("1_f7gaf")
 autoplay = true
-max_distance = 2e+15
 bus = &"music"

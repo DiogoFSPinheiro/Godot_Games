@@ -1,8 +1,9 @@
-[gd_scene load_steps=22 format=3 uid="uid://b3sfwh5kymby2"]
+[gd_scene load_steps=23 format=3 uid="uid://b3sfwh5kymby2"]
 
 [ext_resource type="Script" path="res://scripts/check_point.gd" id="1_7emnv"]
 [ext_resource type="Texture2D" uid="uid://bbwtmiw4325lc" path="res://assets/sprites/slime_purple.png" id="2_sivco"]
 [ext_resource type="Texture2D" uid="uid://c0jowtliehumc" path="res://assets/sprites/check_point.png" id="2_wfevo"]
+[ext_resource type="AudioStream" uid="uid://df0xuma5jkaq8" path="res://assets/sounds/fire.wav" id="4_xx0tf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_is1po"]
 atlas = ExtResource("2_wfevo")
@@ -154,5 +155,10 @@ autoplay = "un_checked"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_iiwic")
+
+[node name="sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_xx0tf")
+attenuation = 0.15932
+bus = &"SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
