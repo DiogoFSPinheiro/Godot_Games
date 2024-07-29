@@ -388,7 +388,7 @@ position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_xv02q")
 animation = &"idle_v2"
 autoplay = "idle_v2"
-frame_progress = 0.738738
+frame_progress = 0.664849
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -6)
@@ -409,7 +409,7 @@ scale = Vector2(0.6875, 0.618421)
 sprite_frames = SubResource("SpriteFrames_mhgg7")
 animation = &"hands"
 autoplay = "stone"
-frame_progress = 0.295284
+frame_progress = 0.75819
 
 [node name="sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_mw8eo")

@@ -14,5 +14,22 @@ func _physics_process(delta):
 		animated_sprite_2d.flip_h = true
 	if Global.colide == true:
 		self.set_collision_mask_value(1, false)
+	if not Global.kill:
+		if not $laught.playing:
+			$laught.play()
+	else:
+		if Global.colide:
+			if not $die.playing:
+				$die.play()
+		else:
+			if not $admiration.playing:
+				$admiration.play()
+		if $laught.playing:
+			$laught.stop()
+		if $admiration.playing and Global.colide:
+			$admiration.stop()
+		if $die.playing and not Global.colide:
+			$die.stop()
+		
 		
 	

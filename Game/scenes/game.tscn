@@ -1692,7 +1692,7 @@ rotation = 1.5708
 script = ExtResource("18_lymw2")
 
 [node name="Portal3" parent="portals" instance=ExtResource("15_bw863")]
-position = Vector2(1384, -2547)
+position = Vector2(1391, -2548)
 rotation = -1.57079
 script = ExtResource("19_ug6q8")
 

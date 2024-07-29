@@ -12,3 +12,5 @@ res://scenes/stone.tscn
 res://scenes/killzone.tscn
 res://scenes/platform.tscn
 res://scripts/player.gd
+res://scripts/vilan.gd
+res://scripts/global.gd
