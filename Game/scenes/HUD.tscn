@@ -108,7 +108,7 @@ theme_override_fonts/font = ExtResource("2_okfii")
 theme_override_font_sizes/font_size = 23
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(33.875, 31)
-scale = Vector2(3.26563, 3)
+position = Vector2(38.1875, 30)
+scale = Vector2(4.22656, 3.875)
 sprite_frames = SubResource("SpriteFrames_cn7ei")
 frame_progress = 0.359012

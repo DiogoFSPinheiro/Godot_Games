@@ -42,8 +42,11 @@ func _physics_process(delta):
 			animated_sprite.play("idle_v2")
 		else:
 			animated_sprite.play("run_v2")
+			
+			
 	else:
 		animated_sprite.play("jump_v2")
+		
 	# flip the sprite and hit boxes
 	if direction != 0 && (near_block == false && !Input.is_action_just_pressed("grab")):
 		update_direction(direction)
@@ -81,8 +84,14 @@ func _physics_process(delta):
 	else:
 		if $sound.playing:
 			$sound.stop()
-
 	
+	if direction != 0  and self.is_on_floor():
+		$steps.pitch_scale = randf_range(0.09,0.16)
+		if not $steps.playing:
+			$steps.play()
+	else:
+		if $steps.playing:
+			$steps.stop()
 	
 	if Input.is_action_just_pressed("reset"):
 		Global.reset()
