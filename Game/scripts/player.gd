@@ -33,6 +33,7 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and (is_on_floor() or near_block == true or is_on_wall()):
 		velocity.y = JUMP_VELOCITY
+		$jump.play()
 	# get direction
 	var direction = Input.get_axis("move_left", "move_right")
 	# chosing animation 
@@ -64,9 +65,12 @@ func _physics_process(delta):
 
 	move_and_slide()  
 	
-	if near_block:
+	if near_block and Global.kill == false:
 		stone_anim.show() # show sprite
 		stone_anim.play("hands")
+	elif Global.kill == true:
+		stone_anim.show() # show sprite
+		stone_anim.play("stone")
 	else:
 		stone_anim.hide()
 	
@@ -130,6 +134,7 @@ func move_block(delta, direction): # tenho de mover no mesmo processo para eles 
 func _on_timer_timeout():
 	Engine.time_scale = 1
 	self.position = Vector2(3384, -2046)
+	Global.spawn_point = Vector2(3384, -2046)
 	
 
 

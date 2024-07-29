@@ -10,9 +10,4 @@ res://scenes/portal.tscn
 res://scenes/vilan.tscn
 res://scenes/stone.tscn
 res://scenes/killzone.tscn
-res://scripts/player.gd
-res://scripts/check_point.gd
-res://default_bus_layout.tres
-res://scripts/global.gd
-res://scripts/killzone.gd
-res://scripts/slime.gd
+res://scenes/platform.tscn

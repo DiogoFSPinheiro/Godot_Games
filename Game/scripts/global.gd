@@ -1,6 +1,6 @@
 extends Node
 
-var spawn_point = Vector2(2209, -2384) # init (2209, -2384) test(250, -16)
+var spawn_point = Vector2(2199, -2772)# init (2199, -2772) test(250, -16)
 var collected_checkpoints = {}
 var collected_items = {}
 var coin = 0
