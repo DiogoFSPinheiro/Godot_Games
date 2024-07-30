@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=3 uid="uid://ebas5byju6vd"]
+[gd_scene load_steps=78 format=3 uid="uid://ebas5byju6vd"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_07ios"]
 [ext_resource type="PackedScene" uid="uid://1xjwovya6ixr" path="res://scenes/player.tscn" id="1_fe8fl"]
@@ -458,7 +458,7 @@ size = Vector2(769, 110)
 size = Vector2(286, 4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1xb2d"]
-size = Vector2(175, 5)
+size = Vector2(109.5, 5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cciji"]
 size = Vector2(11, 101)
@@ -808,6 +808,9 @@ animations = [{
 "speed": 3.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8tpnh"]
+size = Vector2(46, 5)
+
 [node name="Game" type="Node2D"]
 
 [node name="GameManager" type="Node" parent="."]
@@ -980,14 +983,14 @@ shape = SubResource("RectangleShape2D_125gi")
 position = Vector2(1341, -1438)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kill_zones/Killzone4"]
-position = Vector2(75, 11.5)
+position = Vector2(107.75, 11.5)
 shape = SubResource("RectangleShape2D_1xb2d")
 
 [node name="Killzone6" parent="Kill_zones" instance=ExtResource("5_oxpk6")]
 position = Vector2(1341, -1438)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kill_zones/Killzone6"]
-position = Vector2(-114.5, 123)
+position = Vector2(-86, 122)
 shape = SubResource("RectangleShape2D_1xb2d")
 
 [node name="Killzone8" parent="Kill_zones" instance=ExtResource("5_oxpk6")]
@@ -1164,12 +1167,8 @@ position = Vector2(2232, 24)
 item_id = "13"
 
 [node name="Coin11" parent="Coins" instance=ExtResource("4_phanf")]
-position = Vector2(2283, -2583)
+position = Vector2(2329, -2583)
 item_id = "10"
-
-[node name="Coin12" parent="Coins" instance=ExtResource("4_phanf")]
-position = Vector2(1320, 390)
-item_id = "12"
 
 [node name="Coin10" parent="Coins" instance=ExtResource("4_phanf")]
 position = Vector2(1336, -2108)
@@ -1266,13 +1265,13 @@ checkpoint_id = "3"
 position = Vector2(1352, -2396)
 checkpoint_id = "6"
 
-[node name="check_point7" parent="Check Points" instance=ExtResource("9_gmphc")]
-position = Vector2(2216, -2588)
-checkpoint_id = "20"
-
 [node name="check_point8" parent="Check Points" instance=ExtResource("9_gmphc")]
-position = Vector2(1331, 388)
-checkpoint_id = "21"
+position = Vector2(1336, -2220)
+checkpoint_id = "8"
+
+[node name="check_point7" parent="Check Points" instance=ExtResource("9_gmphc")]
+position = Vector2(2248, -2588)
+checkpoint_id = "20"
 
 [node name="Blocks_lvl1" type="Node" parent="."]
 
@@ -1784,7 +1783,7 @@ offset_right = 2444.0
 offset_bottom = -2385.0
 theme_override_fonts/font = ExtResource("21_rm75a")
 theme_override_font_sizes/font_size = 8
-text = "Welcome to Little Shadow Escape!!
+text = "Welcome to Alchemical Pathways!!
 In this game you have to escape by moving
 the tower blocks to get to the top and
 deafeat the Evil Alchemist!"
@@ -1823,7 +1822,7 @@ offset_right = 2426.0
 offset_bottom = -2198.0
 theme_override_fonts/font = ExtResource("21_rm75a")
 theme_override_font_sizes/font_size = 8
-text = "Feed the altars with Gems to save
+text = "Feed the altars with Ashes to save
 your check point
 
 Press \"Esc\" and the level will reset
@@ -1842,3 +1841,13 @@ text = "Don't forget!
 If you make a mistake 
 press \"Esc\""
 metadata/_edit_use_anchors_ = true
+
+[node name="Killzone" parent="." instance=ExtResource("5_oxpk6")]
+position = Vector2(1340, -1477)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(12, 50.5)
+shape = SubResource("RectangleShape2D_8tpnh")
+
+[node name="Coin" parent="." instance=ExtResource("4_phanf")]
+position = Vector2(1384, -1434)

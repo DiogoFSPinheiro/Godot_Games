@@ -388,7 +388,6 @@ position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_xv02q")
 animation = &"idle_v2"
 autoplay = "idle_v2"
-frame_progress = 0.664849
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -6)
@@ -404,7 +403,7 @@ shape = SubResource("RectangleShape2D_fgo6c")
 one_shot = true
 
 [node name="stone_anim" type="AnimatedSprite2D" parent="."]
-position = Vector2(9, -6)
+position = Vector2(8, -6)
 scale = Vector2(0.6875, 0.618421)
 sprite_frames = SubResource("SpriteFrames_mhgg7")
 animation = &"hands"
@@ -426,8 +425,11 @@ stream = ExtResource("6_3ksnx")
 pitch_scale = 0.13
 bus = &"SFX"
 
+[node name="coyote_timer" type="Timer" parent="."]
+
 [connection signal="area_entered" from="grab_area" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="grab_area" to="." method="_on_area_2d_area_exited"]
 [connection signal="body_entered" from="grab_area" to="." method="_on_grab_area_body_entered"]
 [connection signal="body_exited" from="grab_area" to="." method="_on_grab_area_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="coyote_timer" to="." method="coyote_timeout"]
