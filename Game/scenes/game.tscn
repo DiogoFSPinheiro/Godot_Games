@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=3 uid="uid://ebas5byju6vd"]
+[gd_scene load_steps=80 format=3 uid="uid://ebas5byju6vd"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_07ios"]
 [ext_resource type="PackedScene" uid="uid://1xjwovya6ixr" path="res://scenes/player.tscn" id="1_fe8fl"]
@@ -28,12 +28,14 @@
 [ext_resource type="Texture2D" uid="uid://cax8gcf8bpoal" path="res://assets/sprites/talk_baloon.png" id="20_fft3q"]
 [ext_resource type="FontFile" uid="uid://cvfdoummd44mg" path="res://assets/fonts/PixelOperator8.ttf" id="21_rm75a"]
 [ext_resource type="Script" path="res://scripts/gate_3.gd" id="22_xuex5"]
+[ext_resource type="Script" path="res://scripts/savior.gd" id="23_1h41a"]
 [ext_resource type="PackedScene" uid="uid://bb1iucovpfanj" path="res://scenes/vilan.tscn" id="24_ntmi3"]
 [ext_resource type="Script" path="res://scripts/vilan_talk.gd" id="25_hhmgu"]
 [ext_resource type="PackedScene" uid="uid://bbnci28qg18p0" path="res://scenes/stone.tscn" id="26_71sc8"]
 [ext_resource type="FontFile" uid="uid://c7hfxtfpy7d0n" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="27_vx3cg"]
 [ext_resource type="Script" path="res://scripts/gate_6.gd" id="28_x1dyw"]
 [ext_resource type="AudioStream" uid="uid://bk3e8l4go4bx0" path="res://assets/sounds/grab_stone.wav" id="31_nbn8s"]
+[ext_resource type="Script" path="res://scripts/world_labels.gd" id="35_pnsuh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6nu08"]
 texture = ExtResource("1_j0nwb")
@@ -1645,6 +1647,7 @@ position = Vector2(873, -2668)
 sprite_frames = SubResource("SpriteFrames_n6mmi")
 autoplay = "default"
 frame_progress = 0.164281
+script = ExtResource("23_1h41a")
 
 [node name="talk" type="Control" parent="savior"]
 layout_mode = 3
@@ -1656,29 +1659,19 @@ offset_bottom = 29.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="savior/talk"]
-position = Vector2(-141, -22)
-scale = Vector2(1.85417, 0.833333)
+position = Vector2(-156.75, -22)
+scale = Vector2(2.51042, 0.833333)
 texture = ExtResource("20_fft3q")
 
 [node name="Label" type="Label" parent="savior/talk"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -1.985
-anchor_top = 1.871
-anchor_right = -1.985
-anchor_bottom = 1.871
-offset_left = -102.6
-offset_top = -113.84
-offset_right = -20.5998
-offset_bottom = -83.84
+layout_mode = 0
+offset_left = -209.0
+offset_top = -38.0
+offset_right = -101.0
+offset_bottom = -9.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("21_rm75a")
 theme_override_font_sizes/font_size = 8
-text = "Take this and
-defeat the
-Alchemist!!
-"
-metadata/_edit_use_anchors_ = true
 
 [node name="portals" type="Node2D" parent="."]
 
@@ -1750,9 +1743,10 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("35_pnsuh")
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="labels"]
+[node name="happy" type="Label" parent="labels"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.15
@@ -1765,12 +1759,9 @@ offset_right = 3473.0
 offset_bottom = -2079.0
 theme_override_fonts/font = ExtResource("27_vx3cg")
 theme_override_font_sizes/font_size = 8
-text = "Congratulations you 
-escaped the tower!!
-Thank you for Playing!"
 metadata/_edit_use_anchors_ = true
 
-[node name="Label2" type="Label" parent="labels"]
+[node name="hi" type="Label" parent="labels"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.625
@@ -1783,50 +1774,36 @@ offset_right = 2444.0
 offset_bottom = -2385.0
 theme_override_fonts/font = ExtResource("21_rm75a")
 theme_override_font_sizes/font_size = 8
-text = "Welcome to Alchemical Pathways!!
-In this game you have to escape by moving
-the tower blocks to get to the top and
-deafeat the Evil Alchemist!"
 metadata/_edit_use_anchors_ = true
 
-[node name="Label3" type="Label" parent="labels"]
+[node name="turial1" type="Label" parent="labels"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.175
-anchor_top = -9.875
-anchor_right = 1.05
-anchor_bottom = -9.875
+anchor_top = -9.8
+anchor_right = 1.9
+anchor_bottom = -9.8
 offset_left = 2162.0
 offset_top = -2350.0
 offset_right = 2415.0
 offset_bottom = -2295.0
 theme_override_fonts/font = ExtResource("21_rm75a")
 theme_override_font_sizes/font_size = 8
-text = "Move with \"a\",\"d\" and arrow keys
-
-Jump with \"space\", \"s\" and arrow down flips player
-
-Hold \"g\" while moving to move the blocks"
 metadata/_edit_use_anchors_ = true
 
-[node name="Label4" type="Label" parent="labels"]
+[node name="turial2" type="Label" parent="labels"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.575
-anchor_top = -9.925
-anchor_right = 0.575
-anchor_bottom = -9.925
+anchor_left = 0.4
+anchor_top = -9.875
+anchor_right = 0.4
+anchor_bottom = -9.875
 offset_left = 2167.0
 offset_top = -2250.0
 offset_right = 2426.0
 offset_bottom = -2198.0
 theme_override_fonts/font = ExtResource("21_rm75a")
 theme_override_font_sizes/font_size = 8
-text = "Feed the altars with Ashes to save
-your check point
-
-Press \"Esc\" and the level will reset
-to your latest checkpoint position"
 metadata/_edit_use_anchors_ = true
 
 [node name="Label5" type="Label" parent="labels"]
@@ -1837,9 +1814,6 @@ offset_right = 1396.0
 offset_bottom = 204.0
 theme_override_fonts/font = ExtResource("21_rm75a")
 theme_override_font_sizes/font_size = 8
-text = "Don't forget! 
-If you make a mistake 
-press \"Esc\""
 metadata/_edit_use_anchors_ = true
 
 [node name="Killzone" parent="." instance=ExtResource("5_oxpk6")]

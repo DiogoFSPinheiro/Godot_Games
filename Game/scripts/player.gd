@@ -99,7 +99,10 @@ func _physics_process(delta):
 			$steps.stop()
 	
 	if Input.is_action_just_pressed("reset"):
-		Global.reset()
+		if Global.colide:
+			get_tree().quit()
+		else:
+			Global.reset()
 
 		
 
