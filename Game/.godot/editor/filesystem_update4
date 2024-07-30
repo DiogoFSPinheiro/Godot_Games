@@ -1,10 +1,6 @@
+res://scenes/global.tscn
 res://scenes/game.tscn
 res://scenes/player.tscn
 res://scenes/vilan.tscn
-res://scenes/global.tscn
-res://scripts/global.gd
-res://scripts/gate_6.gd
-res://scripts/player.gd
 res://scenes/check_point.tscn
 res://scenes/killzone.tscn
-res://default_bus_layout.tres

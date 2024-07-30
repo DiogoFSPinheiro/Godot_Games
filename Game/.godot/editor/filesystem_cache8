@@ -1,6 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1722335879
-default_bus_layout.tres::AudioBusLayout::6462712206308418476::1722264810::0::1::::<><>::
+::res://::1722355429
+default_bus_layout.tres::AudioBusLayout::6462712206308418476::1722352940::0::1::::<><>::
+icon.png::CompressedTexture2D::8185395323624188665::1722355381::1722355429::1::::<><>::
 icon.svg::CompressedTexture2D::7322379588914176519::1722241300::1722329434::1::::<><>::
 ::res://assets/::1722241300
 ::res://assets/BG/::1722241300
@@ -32,7 +33,7 @@ move_stone.wav::AudioStreamWAV::898250775733122070::1722241300::1722241300::1:::
 power_up.wav::AudioStreamWAV::5803669692005258225::1722241300::1722241300::1::::<><>::
 Steps.ogg::AudioStreamOggVorbis::6410681982590153404::1722326169::1722326169::1::::<><>::
 tap.wav::AudioStreamWAV::7293660349357575327::1722241300::1722241300::1::::<><>::
-::res://assets/sprites/::1722351304
+::res://assets/sprites/::1722351306
 check_point.png::CompressedTexture2D::6547032198793816610::1722241300::1722241300::1::::<><>::
 check_point_on.png::CompressedTexture2D::1903923503843421061::1722241300::1722241300::1::::<><>::
 coin.png::CompressedTexture2D::762174322610929664::1722326169::1722241300::1::::<><>::
@@ -49,25 +50,25 @@ stone.png::CompressedTexture2D::6003067908269424310::1722241300::1722241300::1::
 talk_baloon.png::CompressedTexture2D::4822336545526333099::1722241300::1722241300::1::::<><>::
 world_tileset - Cópia.png::CompressedTexture2D::1311082749651522547::1722241300::1722241300::1::::<><>::
 world_tileset.png::CompressedTexture2D::7540112544858902533::1722241300::1722241300::1::::<><>::
-::res://scenes/::1722350325
+::res://scenes/::1722354104
 audio_music.tscn::PackedScene::324997553695486969::1722241300::0::1::::<><>::uid://lao0radgqv7e::::res://assets/music/Cyclopean Structure.mp3
 block.tscn::PackedScene::9049668321176407074::1722268640::0::1::::<><>::uid://dfoqs1dntmihh::::res://assets/sprites/world_tileset.png<>res://scripts/block.gd
-check_point.tscn::PackedScene::4389210392055307247::1722350325::0::1::::<><>::res://scripts/check_point.gd<>uid://bbwtmiw4325lc::::res://assets/sprites/slime_purple.png<>uid://c0jowtliehumc::::res://assets/sprites/check_point.png<>uid://df0xuma5jkaq8::::res://assets/sounds/fire.wav
+check_point.tscn::PackedScene::4389210392055307247::1722354104::0::1::::<><>::res://scripts/check_point.gd<>uid://bbwtmiw4325lc::::res://assets/sprites/slime_purple.png<>uid://c0jowtliehumc::::res://assets/sprites/check_point.png<>uid://df0xuma5jkaq8::::res://assets/sounds/fire.wav
 coin.tscn::PackedScene::6594627795149855851::1722268640::0::1::::<><>::res://scripts/coin.gd<>uid://k4g5udky7w6k::::res://assets/sprites/coin.png<>uid://bk3e8l4go4bx0::::res://assets/sounds/grab_stone.wav
-game.tscn::PackedScene::282853474945086009::1722350325::0::1::::<><>::res://scripts/game_manager.gd<>uid://1xjwovya6ixr::::res://scenes/player.tscn<>uid://dfoqs1dntmihh::::res://assets/sprites/world_tileset.png<>uid://cchlg0dx7y81n::::res://assets/BG/Clouds 3/1.png<>uid://r1grshdxmk0::::res://scenes/platform.tscn<>uid://di2ybl645q6j7::::res://assets/BG/Clouds 3/2.png<>uid://bxw4mpsdnk2t::::res://assets/BG/Clouds 3/3.png<>uid://c07qs6c1kf500::::res://scenes/coin.tscn<>uid://ba1r0jqrkja5n::::res://assets/BG/Clouds 3/4.png<>uid://ccekxqrduyewm::::res://scenes/killzone.tscn<>uid://gbcras51b61u::::res://scenes/slime.tscn<>res://scripts/plat_scripts/plat2.gd<>res://scripts/teste.gd<>uid://d16yykvmypnje::::res://scenes/block.tscn<>res://scripts/plat_scripts/plat3.gd<>uid://b3sfwh5kymby2::::res://scenes/check_point.tscn<>uid://bshsd5uqrc1ls::::res://scenes/normal_block.tscn<>uid://cn47mqcrjkowc::::res://scenes/long_block.tscn<>res://scripts/plat_scripts/plat4.gd<>uid://bwr0njeqjea58::::res://scenes/portal.tscn<>res://scripts/gate_1.gd<>uid://chtouee2qy7cu::::res://scenes/HUD.tscn<>res://scripts/gate_2.gd<>uid://c0jowtliehumc::::res://assets/sprites/check_point.png<>res://scripts/gate_4.gd<>uid://cax8gcf8bpoal::::res://assets/sprites/talk_baloon.png<>uid://cvfdoummd44mg::::res://assets/fonts/PixelOperator8.ttf<>res://scripts/gate_3.gd<>uid://bb1iucovpfanj::::res://scenes/vilan.tscn<>res://scripts/vilan_talk.gd<>uid://bbnci28qg18p0::::res://scenes/stone.tscn<>uid://c7hfxtfpy7d0n::::res://assets/fonts/PixelOperator8-Bold.ttf<>res://scripts/gate_6.gd<>uid://bk3e8l4go4bx0::::res://assets/sounds/grab_stone.wav
-global.tscn::PackedScene::825119663012825118::1722350325::0::1::::<><>::res://scripts/global.gd
+game.tscn::PackedScene::282853474945086009::1722354104::0::1::::<><>::res://scripts/game_manager.gd<>uid://1xjwovya6ixr::::res://scenes/player.tscn<>uid://dfoqs1dntmihh::::res://assets/sprites/world_tileset.png<>uid://cchlg0dx7y81n::::res://assets/BG/Clouds 3/1.png<>uid://r1grshdxmk0::::res://scenes/platform.tscn<>uid://di2ybl645q6j7::::res://assets/BG/Clouds 3/2.png<>uid://bxw4mpsdnk2t::::res://assets/BG/Clouds 3/3.png<>uid://c07qs6c1kf500::::res://scenes/coin.tscn<>uid://ba1r0jqrkja5n::::res://assets/BG/Clouds 3/4.png<>uid://ccekxqrduyewm::::res://scenes/killzone.tscn<>uid://gbcras51b61u::::res://scenes/slime.tscn<>res://scripts/plat_scripts/plat2.gd<>res://scripts/teste.gd<>uid://d16yykvmypnje::::res://scenes/block.tscn<>res://scripts/plat_scripts/plat3.gd<>uid://b3sfwh5kymby2::::res://scenes/check_point.tscn<>uid://bshsd5uqrc1ls::::res://scenes/normal_block.tscn<>uid://cn47mqcrjkowc::::res://scenes/long_block.tscn<>res://scripts/plat_scripts/plat4.gd<>uid://bwr0njeqjea58::::res://scenes/portal.tscn<>res://scripts/gate_1.gd<>uid://chtouee2qy7cu::::res://scenes/HUD.tscn<>res://scripts/gate_2.gd<>uid://c0jowtliehumc::::res://assets/sprites/check_point.png<>res://scripts/gate_4.gd<>uid://cax8gcf8bpoal::::res://assets/sprites/talk_baloon.png<>uid://cvfdoummd44mg::::res://assets/fonts/PixelOperator8.ttf<>res://scripts/gate_3.gd<>uid://bb1iucovpfanj::::res://scenes/vilan.tscn<>res://scripts/vilan_talk.gd<>uid://bbnci28qg18p0::::res://scenes/stone.tscn<>uid://c7hfxtfpy7d0n::::res://assets/fonts/PixelOperator8-Bold.ttf<>res://scripts/gate_6.gd<>uid://bk3e8l4go4bx0::::res://assets/sounds/grab_stone.wav
+global.tscn::PackedScene::825119663012825118::1722354104::0::1::::<><>::res://scripts/global.gd
 HUD.tscn::PackedScene::5304272421478129400::1722326169::0::1::::<><>::res://scripts/hud.gd<>uid://cvfdoummd44mg::::res://assets/fonts/PixelOperator8.ttf<>uid://k4g5udky7w6k::::res://assets/sprites/coin.png
-killzone.tscn::PackedScene::4922125675665242280::1722268640::0::1::::<><>::res://scripts/killzone.gd<>uid://bfqbt1yg0mcqp::::res://assets/sounds/HIGH_SNAP_02.wav
+killzone.tscn::PackedScene::4922125675665242280::1722354104::0::1::::<><>::res://scripts/killzone.gd<>uid://bfqbt1yg0mcqp::::res://assets/sounds/HIGH_SNAP_02.wav
 long_block.tscn::PackedScene::5747128507091792550::1722241300::0::1::::<><>::uid://dfoqs1dntmihh::::res://assets/sprites/world_tileset.png<>res://scripts/block.gd
 normal_block.tscn::PackedScene::3665370384053999632::1722241300::0::1::::<><>::res://scripts/block.gd<>uid://dfoqs1dntmihh::::res://assets/sprites/world_tileset.png
 platform.tscn::PackedScene::36684699420780773::1722268640::0::1::::<><>::uid://dqtv7vwupqmwm::::res://assets/sprites/platforms.png<>res://scripts/platform.gd<>res://scripts/plat1are.gd
-player.tscn::PackedScene::1872977132192496119::1722350325::0::1::::<><>::res://scripts/player.gd<>uid://ch4wxekonpjrt::::res://assets/sprites/knight.png<>uid://0jvehjbm1oc5::::res://assets/sprites/knight_v2.png<>uid://m2ecairurj5o::::res://assets/sounds/move_stone.wav<>uid://cjdmwa4kkcavf::::res://assets/sounds/jump.wav<>uid://cxlm837w1p1wq::::res://assets/sounds/Steps.ogg
+player.tscn::PackedScene::1872977132192496119::1722354104::0::1::::<><>::res://scripts/player.gd<>uid://ch4wxekonpjrt::::res://assets/sprites/knight.png<>uid://0jvehjbm1oc5::::res://assets/sprites/knight_v2.png<>uid://m2ecairurj5o::::res://assets/sounds/move_stone.wav<>uid://cjdmwa4kkcavf::::res://assets/sounds/jump.wav<>uid://cxlm837w1p1wq::::res://assets/sounds/Steps.ogg
 portal.tscn::PackedScene::3967211285317275981::1722268640::0::1::::<><>::uid://dvetw5806kagp::::res://assets/sprites/Green Portal Sprite Sheet.png
 slime.tscn::PackedScene::423349261268533228::1722268640::0::1::::<><>::res://scripts/slime.gd<>uid://ptssvsbvg7yf::::res://assets/sprites/slime_green.png<>uid://ccekxqrduyewm::::res://scenes/killzone.tscn<>uid://psr8cl0lc7y4::::res://assets/sprites/skull_enemy.png
 stone.tscn::PackedScene::2483583628315727627::1722268640::0::1::::<><>::res://scripts/stone.gd<>uid://crr6wfah527mg::::res://assets/sprites/stone.png<>uid://bk3e8l4go4bx0::::res://assets/sounds/grab_stone.wav
-vilan.tscn::PackedScene::2510804928405265275::1722350325::0::1::::<><>::uid://ch4wxekonpjrt::::res://assets/sprites/knight.png<>res://scripts/vilan.gd<>uid://qfsdnuqnfjrd::::res://assets/sounds/laugh2.wav<>uid://cepg8hjxtlcn3::::res://assets/sounds/irritated3.wav<>uid://do0y88crom8ye::::res://assets/sounds/alchemist_die.wav
+vilan.tscn::PackedScene::2510804928405265275::1722354104::0::1::::<><>::uid://ch4wxekonpjrt::::res://assets/sprites/knight.png<>res://scripts/vilan.gd<>uid://qfsdnuqnfjrd::::res://assets/sounds/laugh2.wav<>uid://cepg8hjxtlcn3::::res://assets/sounds/irritated3.wav<>uid://do0y88crom8ye::::res://assets/sounds/alchemist_die.wav
 vilan_text.tscn::PackedScene::7483282020700242377::1722241301::0::1::::<><>::uid://cax8gcf8bpoal::::res://assets/sprites/talk_baloon.png<>res://scripts/vilan_text.gd
-::res://scripts/::1722332191
+::res://scripts/::1722353262
 block.gd::GDScript::-1::1722241301::0::1::::<>RigidBody2D<>::
 camera.gd::GDScript::-1::1722241301::0::1::::<>Camera2D<>::
 check_point.gd::GDScript::-1::1722241301::0::1::::<>Area2D<>::
@@ -79,7 +80,7 @@ gate_2.gd::GDScript::-1::1722266349::0::1::::<>Area2D<>::
 gate_3.gd::GDScript::-1::1722266334::0::1::::<>Area2D<>::
 gate_4.gd::GDScript::-1::1722266334::0::1::::<>Area2D<>::
 gate_6.gd::GDScript::-1::1722331265::0::1::::<>Area2D<>::
-global.gd::GDScript::-1::1722329529::0::1::::<>Node<>::
+global.gd::GDScript::-1::1722353262::0::1::::<>Node<>::
 hud.gd::GDScript::-1::1722241301::0::1::::<>CanvasLayer<>::
 killzone.gd::GDScript::-1::1722241301::0::1::::<>Area2D<>::
 plat1are.gd::GDScript::-1::1722241301::0::1::::<>Area2D<>::
