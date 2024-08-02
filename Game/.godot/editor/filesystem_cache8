@@ -1,8 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1722366186
+::res://::1722614353
 Dawnbeast Productions.png::CompressedTexture2D::1538126130466301566::1722361748::1722361762::1::::<><>::
 default_bus_layout.tres::AudioBusLayout::6462712206308418476::1722361224::0::1::::<><>::
-export_presets.cfg::TextFile::-1::1722361479::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1722366176::0::1::::<><>::
 icon.png::CompressedTexture2D::8185395323624188665::1722361224::1722361224::1::::<><>::
 icon.svg::CompressedTexture2D::7322379588914176519::1721733889::1722361448::1::::<><>::
 ::res://assets/::1722164593
@@ -52,7 +52,7 @@ stone.png::CompressedTexture2D::6003067908269424310::1722107928::1722107930::1::
 talk_baloon.png::CompressedTexture2D::4822336545526333099::1722102279::1722102281::1::::<><>::
 world_tileset - Cópia.png::CompressedTexture2D::1311082749651522547::1721733889::1721733889::1::::<><>::
 world_tileset.png::CompressedTexture2D::7540112544858902533::1722164006::1722164011::1::::<><>::
-::res://Game/::1722366176
+::res://Game/::1722366310
 index.apple-touch-icon.png::CompressedTexture2D::2059231484310409291::1722366176::1722366310::1::::<><>::
 index.icon.png::CompressedTexture2D::565772883232386320::1722366176::1722366310::1::::<><>::
 index.png::CompressedTexture2D::1644733124957395796::1722366176::1722366310::1::::<><>::
@@ -93,7 +93,6 @@ plat1are.gd::GDScript::-1::1721821444::0::1::::<>Area2D<>::
 platform.gd::GDScript::-1::1721821169::0::1::::<>AnimatableBody2D<>::
 player.gd::GDScript::-1::1722362663::0::1::::<>CharacterBody2D<>::
 Portal.gd::GDScript::-1::1722097942::0::1::::<>Area2D<>::
-world_labels.gd::GDScript::-1::1722366145::0::1::::<>Control<>::
 savior.gd::GDScript::-1::1722365244::0::1::::<>AnimatedSprite2D<>::
 slime.gd::GDScript::-1::1722202620::0::1::::<>Node2D<>::
 stone.gd::GDScript::-1::1722108173::0::1::::<>Area2D<>::
@@ -101,6 +100,7 @@ teste.gd::GDScript::-1::1721751843::0::1::::<>AnimationPlayer<>::
 vilan.gd::GDScript::-1::1722292445::0::1::::<>RigidBody2D<>::
 vilan_talk.gd::GDScript::-1::1722116537::0::1::::<>Control<>::
 vilan_text.gd::GDScript::-1::1722104939::0::1::::<>Control<>::
+world_labels.gd::GDScript::-1::1722366145::0::1::::<>Control<>::
 ::res://scripts/plat_scripts/::1722285882
 plat2.gd::GDScript::-1::1721821533::0::1::::<>AnimationPlayer<>::
 plat3.gd::GDScript::-1::1721830591::0::1::::<>AnimationPlayer<>::

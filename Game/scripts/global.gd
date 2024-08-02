@@ -25,6 +25,7 @@ func is_item_collected(item_id):
 func reset():
 	if cooldown == true:
 		cooldown = false
+		Engine.time_scale = 1
 		get_tree().reload_current_scene()
 	$Timer.start()
 		
