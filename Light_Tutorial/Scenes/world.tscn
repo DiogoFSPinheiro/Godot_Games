@@ -1,3 +1,185 @@
-[gd_scene format=3 uid="uid://dlcyltv8lkojo"]
+[gd_scene load_steps=18 format=3 uid="uid://dlcyltv8lkojo"]
+
+[ext_resource type="PackedScene" uid="uid://cmcs46t632plf" path="res://Scenes/player.tscn" id="1_vgixr"]
+[ext_resource type="Texture2D" uid="uid://j2umw1l0a681" path="res://icon.svg" id="1_wu0cg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6l612"]
+size = Vector2(325.75, 136.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oekem"]
+size = Vector2(701.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jxbta"]
+size = Vector2(58, 186.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3bxqk"]
+size = Vector2(454.5, 54.9999)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ti5po"]
+polygon = PackedVector2Array(463, 54, 495, 167, 798, 91, 941, 39, 911, -67)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_k5uh4"]
+polygon = PackedVector2Array(36, -91, 419, 17, 383, 132, 0, 21)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_d6o6k"]
+polygon = PackedVector2Array(814, 92, 811, 172, 934, 177, 941, 166, 943, 41)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8h7qu"]
+polygon = PackedVector2Array(674, 475, 923, 479, 923, 608, 678, 604)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4t5sg"]
+polygon = PackedVector2Array(4, 29, 8, 604, 226, 610, 226, 482, 57, 480, 62, 53)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_vi16c"]
+polygon = PackedVector2Array(216, 546, 694, 545, 699, 606, 218, 607)
+
+[sub_resource type="Gradient" id="Gradient_f56gj"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ikivp"]
+gradient = SubResource("Gradient_f56gj")
+fill_from = Vector2(0.105505, 0.862385)
+fill_to = Vector2(0.490826, 0.688073)
+
+[sub_resource type="Gradient" id="Gradient_occax"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6bpgx"]
+gradient = SubResource("Gradient_occax")
+height = 250
+fill_from = Vector2(0.450721, 0.867521)
+fill_to = Vector2(0.484108, 0.294872)
+
+[sub_resource type="Environment" id="Environment_7qsdh"]
+background_mode = 3
+tonemap_mode = 3
+tonemap_exposure = 0.37
+tonemap_white = 1.95
+glow_enabled = true
+glow_normalized = true
+glow_strength = 0.22
 
 [node name="World" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_left = -568.0
+offset_top = -350.0
+offset_right = 1697.0
+offset_bottom = 958.0
+color = Color(0.151396, 0.155456, 0.160103, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(208, 22)
+rotation = 0.261799
+scale = Vector2(3.22656, 1.10938)
+texture = ExtResource("1_wu0cg")
+
+[node name="Sprite2D3" type="Sprite2D" parent="StaticBody2D"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(31.0003, 285.916)
+rotation = 1.5708
+scale = Vector2(4.38412, 0.515625)
+texture = ExtResource("1_wu0cg")
+
+[node name="Sprite2D4" type="Sprite2D" parent="StaticBody2D"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(797.607, 539.645)
+rotation = 1.5708
+scale = Vector2(1.10959, 2.03818)
+texture = ExtResource("1_wu0cg")
+
+[node name="Sprite2D6" type="Sprite2D" parent="StaticBody2D"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(875.708, 97.1858)
+rotation = 1.5708
+scale = Vector2(1.23332, 1.08919)
+texture = ExtResource("1_wu0cg")
+
+[node name="Sprite2D7" type="Sprite2D" parent="StaticBody2D"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(407.114, 577)
+rotation = 3.14159
+scale = Vector2(6.27166, 0.515625)
+texture = ExtResource("1_wu0cg")
+
+[node name="Sprite2D8" type="Sprite2D" parent="StaticBody2D"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(135, 540)
+rotation = 3.14159
+scale = Vector2(1.49544, 0.974476)
+texture = ExtResource("1_wu0cg")
+
+[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(698.556, 28.3677)
+rotation = -0.261799
+scale = Vector2(3.70324, 1.43099)
+texture = ExtResource("1_wu0cg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(69, 546)
+shape = SubResource("RectangleShape2D_6l612")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(830.875, 538.25)
+shape = SubResource("RectangleShape2D_6l612")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(484, 558)
+shape = SubResource("RectangleShape2D_oekem")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(22, 389)
+shape = SubResource("RectangleShape2D_jxbta")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(926, 356)
+rotation = 1.57079
+shape = SubResource("RectangleShape2D_3bxqk")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(512, 336)
+
+[node name="Player" parent="." instance=ExtResource("1_vgixr")]
+position = Vector2(141, 414)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="StaticBody2D2"]
+occluder = SubResource("OccluderPolygon2D_ti5po")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="StaticBody2D2"]
+occluder = SubResource("OccluderPolygon2D_k5uh4")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="StaticBody2D2"]
+occluder = SubResource("OccluderPolygon2D_d6o6k")
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="StaticBody2D2"]
+occluder = SubResource("OccluderPolygon2D_8h7qu")
+
+[node name="LightOccluder2D5" type="LightOccluder2D" parent="StaticBody2D2"]
+occluder = SubResource("OccluderPolygon2D_4t5sg")
+
+[node name="LightOccluder2D6" type="LightOccluder2D" parent="StaticBody2D2"]
+occluder = SubResource("OccluderPolygon2D_vi16c")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(1236, 78)
+scale = Vector2(42.7187, 17.1484)
+energy = 1.15
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_ikivp")
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(436, -30)
+scale = Vector2(7.89063, 5.85937)
+energy = 5.0
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_6bpgx")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_7qsdh")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0.231373, 0.333333, 1, 0.501961)
