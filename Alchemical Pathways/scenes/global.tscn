@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://l0xun7ejey5s"]
+
+[ext_resource type="Script" path="res://scripts/global.gd" id="1_gv8ye"]
+
+[node name="Global" type="Node"]
+script = ExtResource("1_gv8ye")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

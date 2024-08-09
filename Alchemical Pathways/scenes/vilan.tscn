@@ -1,0 +1,84 @@
+[gd_scene load_steps=12 format=3 uid="uid://bb1iucovpfanj"]
+
+[ext_resource type="Texture2D" uid="uid://ch4wxekonpjrt" path="res://assets/sprites/knight.png" id="1_a6c4f"]
+[ext_resource type="Script" path="res://scripts/vilan.gd" id="1_cigwt"]
+[ext_resource type="AudioStream" uid="uid://qfsdnuqnfjrd" path="res://assets/sounds/laugh2.wav" id="3_kostv"]
+[ext_resource type="AudioStream" uid="uid://cepg8hjxtlcn3" path="res://assets/sounds/irritated3.wav" id="4_qb2cb"]
+[ext_resource type="AudioStream" uid="uid://do0y88crom8ye" path="res://assets/sounds/alchemist_die.wav" id="4_wn1ff"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8cd0l"]
+size = Vector2(11, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2j10"]
+atlas = ExtResource("1_a6c4f")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x63fh"]
+atlas = ExtResource("1_a6c4f")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwit8"]
+atlas = ExtResource("1_a6c4f")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_703fh"]
+atlas = ExtResource("1_a6c4f")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v35pj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2j10")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x63fh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vwit8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_703fh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="vilan" type="RigidBody2D"]
+script = ExtResource("1_cigwt")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 5.5)
+shape = SubResource("RectangleShape2D_8cd0l")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_v35pj")
+autoplay = "default"
+frame_progress = 0.068285
+
+[node name="RayCast_left" type="RayCast2D" parent="."]
+position = Vector2(1, 5)
+target_position = Vector2(-80, 0)
+collision_mask = 2
+
+[node name="RayCast_right" type="RayCast2D" parent="."]
+position = Vector2(2, 5)
+target_position = Vector2(88, 0)
+collision_mask = 2
+
+[node name="laught" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_kostv")
+max_distance = 500.0
+bus = &"SFX"
+
+[node name="die" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_wn1ff")
+volume_db = 3.0
+max_distance = 500.0
+bus = &"SFX"
+
+[node name="admiration" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_qb2cb")
+max_distance = 500.0
+bus = &"SFX"

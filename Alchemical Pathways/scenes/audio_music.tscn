@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://evowrsfjvcer"]
+
+[ext_resource type="AudioStream" uid="uid://lao0radgqv7e" path="res://assets/music/Cyclopean Structure.mp3" id="1_f7gaf"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer"]
+stream = ExtResource("1_f7gaf")
+autoplay = true
+bus = &"music"

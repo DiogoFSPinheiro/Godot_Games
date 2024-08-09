@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bshsd5uqrc1ls"]
+
+[ext_resource type="Script" path="res://scripts/block.gd" id="1_hwweq"]
+[ext_resource type="Texture2D" uid="uid://dfoqs1dntmihh" path="res://assets/sprites/world_tileset.png" id="2_uaoee"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pm04v"]
+size = Vector2(16, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_12pwy"]
+size = Vector2(16, 13)
+
+[node name="Block" type="RigidBody2D" groups=["Blocks"]]
+gravity_scale = 0.0
+script = ExtResource("1_hwweq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_uaoee")
+region_enabled = true
+region_rect = Rect2(32.0007, 16.0264, 16.0074, 15.8591)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pm04v")
+
+[node name="block area" type="Area2D" parent="." groups=["block_area"]]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block area"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_12pwy")
