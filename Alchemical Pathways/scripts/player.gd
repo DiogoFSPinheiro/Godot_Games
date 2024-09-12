@@ -19,7 +19,6 @@ var block_offset = Vector2()
 var jump_available = true
 @onready var coyote_timer = $coyote_timer
 
-
 func _physics_process(delta):
 	if Global.kill == true:
 		stone_anim.show() # show sprite
@@ -90,6 +89,9 @@ func _physics_process(delta):
 		if $sound.playing:
 			$sound.stop()
 	
+	if near_block and Input.is_action_just_pressed("interact") and (Global.path > 0 or Global.destroy > 0):
+		change_block()
+	
 	if direction != 0  and self.is_on_floor():
 		$steps.pitch_scale = randf_range(0.09,0.16)
 		if not $steps.playing:
@@ -126,6 +128,7 @@ func _on_grab_area_body_entered(body):
 		target = blocks_in_range[0]
 		SPEED = 51
 		near_block = true
+	
 	if body.name == "vilan" and Global.kill == true:
 		Engine.time_scale = 0.5
 		Global.colide = true
@@ -147,6 +150,13 @@ func move_block(delta, direction): # tenho de mover no mesmo processo para eles 
 		var move_vector = Vector2(direction * SPEED * delta, 0)
 		target.move_and_collide(move_vector)
 		$sound.pitch_scale = randf_range(0.4,0.65)
+	
+func change_block():
+	if target:
+		if Global.path > 0:
+			target.get_node("CollisionShape2D").queue_free()
+		elif Global.destroy > 0:
+			target.queue_free()
 
 func _on_timer_timeout():
 	Engine.time_scale = 1

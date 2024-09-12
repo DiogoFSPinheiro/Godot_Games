@@ -1,12 +1,14 @@
 extends Node
 
-var spawn_point = Vector2(2199, -2772)# init (2199, -2772) test(250, -16)
+var spawn_point = Vector2(3587, -1708)# init (2199, -2772) test(250, -16)
 var collected_checkpoints = {}
 var collected_items = {}
 var coin = 0
 var kill =  false
 var colide =  false
 var cooldown = true
+var path = 0
+var destroy = 0
 
 func update_spawn(new_point, checkpoint_id):
 	spawn_point = new_point

@@ -1,6 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bwr0njeqjea58"]
+[gd_scene load_steps=10 format=3 uid="uid://bwr0njeqjea58"]
 
 [ext_resource type="Texture2D" uid="uid://dvetw5806kagp" path="res://assets/sprites/Green Portal Sprite Sheet.png" id="1_8otxl"]
+[ext_resource type="Script" path="res://scripts/better_portal.gd" id="1_skq35"]
+[ext_resource type="AudioStream" uid="uid://bk3e8l4go4bx0" path="res://assets/sounds/grab_stone.wav" id="3_j14t5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ab1hb"]
 size = Vector2(53, 23.5)
@@ -44,6 +46,7 @@ animations = [{
 [node name="Portal" type="Area2D"]
 position = Vector2(2137, 344)
 collision_mask = 2
+script = ExtResource("1_skq35")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 12.75)
@@ -54,5 +57,11 @@ position = Vector2(-5, 9)
 rotation = -1.5708
 sprite_frames = SubResource("SpriteFrames_iqlt7")
 autoplay = "default"
+
+[node name="sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_j14t5")
+pitch_scale = 0.46
+max_polyphony = 5
+bus = &"SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
