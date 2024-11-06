@@ -1,8 +1,45 @@
-[gd_scene load_steps=2 format=3 uid="uid://2aaxvp4xuw6o"]
+[gd_scene load_steps=3 format=3 uid="uid://b3vmawvvydltu"]
 
-[ext_resource type="PackedScene" uid="uid://cpon4op5kwvv0" path="res://Scenes/player.tscn" id="1_udpv5"]
+[ext_resource type="PackedScene" uid="uid://daohydtheo3t2" path="res://Scenes/player.tscn" id="1_fadbx"]
+[ext_resource type="Texture2D" uid="uid://dcnty4pakmf13" path="res://icon.svg" id="2_fka2c"]
 
-[node name="game" type="Node2D"]
+[node name="Game" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_udpv5")]
-position = Vector2(374, 177)
+[node name="player" parent="." instance=ExtResource("1_fadbx")]
+position = Vector2(723, -949)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2(27, -5)
+zoom = Vector2(0.5, 0.5)
+process_callback = 0
+position_smoothing_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.170383, 0.171345, 0, 1)
+position = Vector2(855.691, 155)
+scale = Vector2(16.4814, 1)
+skew = -0.806342
+texture = ExtResource("2_fka2c")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(0.170383, 0.171345, 0, 1)
+position = Vector2(805, -2035)
+scale = Vector2(16.4766, 1)
+skew = -0.806342
+texture = ExtResource("2_fka2c")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+modulate = Color(0.170383, 0.171345, 0, 1)
+position = Vector2(-282, -930)
+rotation = -1.57174
+scale = Vector2(17.7363, 1.29012)
+skew = -0.806342
+texture = ExtResource("2_fka2c")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+modulate = Color(0.170383, 0.171345, 0, 1)
+position = Vector2(1883, -943)
+rotation = -1.57174
+scale = Vector2(17.7363, 1.29012)
+skew = -0.806342
+texture = ExtResource("2_fka2c")

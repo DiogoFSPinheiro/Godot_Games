@@ -1,23 +1,18 @@
-extends Node2D
-@export var speed = 400
-var screen_size
+extends CharacterBody2D
 
-func _ready()-> void:
-	screen_size = get_viewport_rect().size
+const SPEED = 600.0
 
-func _physics_process(delta: float) -> void:
-	var velocity = Vector2.ZERO
-	if Input.is_action_pressed("move_right"):
-		velocity.x += 1
-	if Input.is_action_pressed("move_left"):
-		velocity.x -= 1
-	if Input.is_action_pressed("move_up"):
-		velocity.y -= 1
-	if Input.is_action_pressed("move_down"):
-		velocity.y += 1
+func _physics_process(delta):
+
+	var direction = Vector2(Input.get_axis("move_left", "move_right"),Input.get_axis("move_up", "move_down"))
 	
-	if velocity.length() > 0:
-		velocity = velocity.normalized() * speed
+	# Normalize to prevent diagonal speed increase
+	if direction.length() > 0:
+		direction = direction.normalized()
 	
-	position += velocity * delta
-	position = position.clamp(Vector2.ZERO, screen_size)
+	# Apply movement with speed
+	velocity = direction * SPEED
+	
+	# Use move_and_slide with velocity to handle movement
+	move_and_slide()
+#https://www.youtube.com/watch?v=dCsg0nJO_bU
