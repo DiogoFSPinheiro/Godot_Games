@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://lao0radgqv7e"
+path="res://.godot/imported/Cyclopean Structure.mp3-78cd76874e1e1aa197dd44b467c5cf01.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Cyclopean Structure.mp3"
+dest_files=["res://.godot/imported/Cyclopean Structure.mp3-78cd76874e1e1aa197dd44b467c5cf01.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
