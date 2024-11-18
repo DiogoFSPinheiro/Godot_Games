@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3vmawvvydltu"]
+[gd_scene load_steps=6 format=3 uid="uid://b3vmawvvydltu"]
 
 [ext_resource type="PackedScene" uid="uid://daohydtheo3t2" path="res://Scenes/player.tscn" id="1_fadbx"]
 [ext_resource type="Texture2D" uid="uid://dcnty4pakmf13" path="res://icon.svg" id="2_fka2c"]
 [ext_resource type="PackedScene" uid="uid://cgn7hplmfhgkq" path="res://Scenes/enemy.tscn" id="3_tpruo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_br1b6"]
+radius = 65.9242
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u7rwd"]
 radius = 58.0
@@ -28,7 +31,12 @@ position_smoothing_enabled = true
 
 [node name="Enemy" parent="." instance=ExtResource("3_tpruo")]
 position = Vector2(1276, -689)
-speed = null
+
+[node name="Sprite2D2" type="Sprite2D" parent="Enemy"]
+texture = ExtResource("2_fka2c")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Enemy"]
+shape = SubResource("CircleShape2D_br1b6")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 collision_layer = 3
@@ -42,14 +50,3 @@ texture = ExtResource("2_fka2c")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(964, -641)
 shape = SubResource("CapsuleShape2D_u7rwd")
-
-[node name="Enemy2" parent="." instance=ExtResource("3_tpruo")]
-speed = null
-
-[node name="Enemy3" parent="." instance=ExtResource("3_tpruo")]
-position = Vector2(232, -1185)
-speed = null
-
-[node name="Enemy4" parent="." instance=ExtResource("3_tpruo")]
-position = Vector2(-472, -970)
-speed = null
